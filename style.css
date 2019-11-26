@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(rgb(25, 163, 182), rgb(29, 39, 124));
+    font-family: sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.location, .temperature {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.location {
+    height: 15vh;
+    margin-top: 15px;
+}
+
+.temperature {
+    height: 20vh;
+    /* margin-bottom: 20px; */
+    flex-direction: column;
+}
+
+
+.degree-section {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.degree-section span {
+    margin: 10px;
+    font-size: 30px;
+}
+
+.degree-section h2 {
+    font-size: 40px;
+}
+
+#location-form {
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 2px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: rgb(15, 196, 241);
+    border: 1px solid rgb(15, 196, 241);
+    color: #000;
+  }
+
+button {
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    padding: 4px 10px;
+    border-radius: 5px;
+    background-color: rgb(209, 59, 13);
+    border: 1px solid rgb(209, 59, 13);
+    color: #fff;
+}
+
+.sun-section {
+    height: 15vh;
+    margin-top: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun-section h3 {
+    margin: 6px 0;
+
+}
+
+/* Rocket */
+
+.rocket{
+    width: 60px;
+    position: absolute;
+    bottom: 25px;
+    right: 80px;
+}
+
+.platform{
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    background: black;
+    position: absolute;
+    bottom: 0px;
+    right: 100px;
+}
+
+.rocket{
+    transition: transform 3s ease-out;
+}
+
+.flying{
+    transform: translateY(-800px) scale(0.1);
+}
+
+/* Ship */
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes embark {
+    from {
+        left: 0;
+    }
+    to {
+        left: 85%;
+    }
+}
+
+.departing {
+    animation: embark 6s forwards;
+}
+
+.ship{
+    width: 180px;
+    position: absolute;
+    bottom: 11px;
+    left: 50px;
+    z-index: 5;
+    animation: float 2s infinite;
+}
+
+.sea{
+    width: 100%;
+    height: 38px;
+    border: 1px solid rgb(15, 196, 241);
+    background: rgb(15, 196, 241);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation: float 2.1s infinite;
+}
+
+/* Sun */
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.sun{
+    width: 170px;
+    position: absolute;
+    top: 25px;
+    left: 110px;
+    animation: spin 30s infinite;
+}
+
+.cloud {
+    width: 100px;
+    position: absolute;
+}
+
+.cloud1 {
+    top: 10px;
+    right: 180px;
+    animation: blow1 16s infinite;
+}
+
+.cloud2 {
+    top: 40px;
+    right: 100px;
+    animation: blow2 16s infinite;
+}
+
+@keyframes blow1 {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+}
+
+@keyframes blow2 {
+    0%, 100% {
+        transform: translateX(80px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+}
+

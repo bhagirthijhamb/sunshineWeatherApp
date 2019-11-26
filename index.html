@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>Have A Good Day App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="animations">
+            <img src="ship1.png" alt="Ship" class="ship">
+            <img src="sun.png" alt="Sun" class="sun">
+            <img src="cloud.png" alt="Cloud" class="cloud cloud1">
+            <img src="cloud.png" alt="Cloud" class="cloud cloud2">
+            <div class="sea"></div>
+        </div>
+
+        <div class="location">
+            <h2 class="location-timezone">Timezone</h1>
+            <!-- <p>Icon</p> -->
+        </div>
+            
+        <div class="temperature">
+            <div class="degree-section">
+                <h2 class="temperature-degree">34</h2>
+                <span>F</span>
+            </div>
+            
+            <div class="temperature-description">
+                <h3>Its freezing cold</h3>
+            </div>
+        </div>
+
+        <div class="sun-section">
+                    <h3>Sunrise: <span id="sun-rise"></span></h3>
+                    <h3>Sunset: <span id="sun-set"></span></h3>
+        </div>            
+        
+        <form id="location-form">
+            <input type="text" id="location-input" placeholder="Enter Location">
+            <button type="submit" onclick="blastOff()">Go Ahead</button>
+        </form>
+            
+        <br>
+            
+        <!-- <div>
+            <h3>Latitude:</h3>
+            <p id="lat"></p>
+        </div>
+    
+        <div>
+            <h3>Longitude:</h3>
+            <p id="long"></p>
+        </div> -->
+
+            
+            
+            <img src="rocket.png" class="rocket"/>
+            <!-- <div class="platform"></div> -->
+    
+  <script src="app.js"></script>
+    
+</body>
+</html>
